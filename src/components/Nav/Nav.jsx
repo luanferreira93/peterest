@@ -26,9 +26,9 @@ export default function Nav() {
         <ul>
           <li className='margin-bottom-25 svg-color'><Link to="/"><ReactSVG src={Pet} width={24} height={24} /></Link></li>
           <li className='margin-bottom-25'><Link to="/cats"><ReactSVG src={Cat} /></Link></li>
-          <li><a to="/dogs"><ReactSVG src={Dog} /></a></li>
-          <li className='icon-heart'><a to="/favorites"><ReactSVG src={Heart} className='icon-heart' /></a></li>
-          <li><a to="/info"><ReactSVG src={Info} /></a></li>
+          <li><Link to="/dogs"><ReactSVG src={Dog} /></Link></li>
+          <li className='icon-heart'><Link to="/favorites"><ReactSVG src={Heart} className='icon-heart' /></Link></li>
+          <li><Link to="/info"><ReactSVG src={Info} /></Link></li>
         </ul>
       </nav>
   )
