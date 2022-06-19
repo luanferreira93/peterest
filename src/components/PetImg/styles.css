@@ -1,26 +1,46 @@
 .img-container{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.img-container{
     position: relative;
 }
 
 .button-container{
     position: absolute;
+    cursor: pointer;
     width: 100%;
+    height: 100%;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container:hover{
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.button-container svg{
+    width: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.buttons{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.button-container svg{
-    width: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
 .button-container .heart path{
-    fill: rgba(255, 0, 0, 0.493);
+    fill: rgba(255, 255, 255, 0.815);
 }
 
 .button-container .down path{
-    fill: #fff;
+    fill: rgba(255, 255, 255, 0.815);
 }

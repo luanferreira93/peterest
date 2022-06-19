@@ -13,8 +13,10 @@ export default function PetImg({ listPet }) {
                     return (
                         <div className="img-container">
                             <div className="button-container">
-                                <ReactSVG src={Heart} className="heart" />
+                                <div className="buttons">
                                 <ReactSVG src={Download} className="down" />
+                                <ReactSVG src={Heart} className="heart" />
+                                </div>
                             </div>
                             <img src={pet} />
                         </div>
