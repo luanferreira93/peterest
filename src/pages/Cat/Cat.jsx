@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react"
+
+import Loading from '../../components/Loading/Loading';
+
 import CatApi from "../../services/catApi"
 import PetImg from "../../components/PetImg/PetCard"
 
@@ -6,6 +9,8 @@ import PetImg from "../../components/PetImg/PetCard"
 export default function Cat() {
 
     const [randomCat, setRandomCat] = useState([]);
+
+    const [spinnerLoading, spinnerSetLoading] = useState(true);
 
     useEffect(() => {
 
@@ -20,11 +25,15 @@ export default function Cat() {
             })
 
             setRandomCat(listCat);
-            
+            spinnerSetLoading(false);
         }
         Pet();
 
     }, [])
+
+    if(spinnerLoading){
+        return <Loading/>
+    }
 
    return(
        <PetImg listPet={randomCat} />
