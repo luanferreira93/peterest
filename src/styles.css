@@ -17,8 +17,11 @@ html{
 }
 
 img{
-    max-width: 100%;
-    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    margin-bottom: 10px;
+    margin-right: 4px;
 }
 
 button{
@@ -37,66 +40,12 @@ button{
     display: flex;
 }
 
-nav{
-    width: 80px;
-    height: 360px;
-    background: #FFFFFF;
-    border-radius: 20px; 
-    position: fixed;
-}
-
-nav,ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .margin-bottom-25{
     margin-bottom: 25px;
 }
 
-.icon-heart{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.icon-heart path{
-    fill: red;
-}
-
-.icon-heart:hover path{
-    fill: red;
-}
-
-
 main{
-  width: 1008px;
+  max-width: 1008px;
   margin: 0 auto;
 }
 
-.card-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-svg{
-    width: 40px;
-    height: 40px;
-}
-
-svg:hover path {
-    transition: all 0.3s ease-in-out;
-    fill: orangered;
-  }
-
-  .grid-item {
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-
-  a:active{
-    fill: orangered;
-  }

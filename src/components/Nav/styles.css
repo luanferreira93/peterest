@@ -1,0 +1,41 @@
+nav{
+    width: 80px;
+    height: 360px;
+    background: #FFFFFF;
+    border-radius: 20px; 
+    position: fixed;
+}
+
+nav,ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a:active{
+    fill: orangered;
+}
+
+
+.icon-heart{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-heart path{
+    fill: red;
+}
+
+.icon-heart:hover path{
+    fill: red;
+}
+
+svg{
+    width: 40px;
+    height: 40px;
+}
+
+svg:hover path {
+    transition: all 0.3s ease-in-out;
+    fill: orangered;
+}
