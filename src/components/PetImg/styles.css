@@ -1,0 +1,26 @@
+.img-container{
+    position: relative;
+}
+
+.button-container{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container svg{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.button-container .heart path{
+    fill: rgba(255, 0, 0, 0.493);
+}
+
+.button-container .down path{
+    fill: #fff;
+}

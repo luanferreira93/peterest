@@ -6,6 +6,8 @@ import DogApi from '../../services/dogApi';
 
 import CatApi from '../../services/catApi';
 
+import random from '../../utils/random';
+
 
 export default function Home(){
 
@@ -34,16 +36,8 @@ export default function Home(){
     
         Pet()
       }, [])
-    
-      let randomNumber;
-      let tmp;
-    
-      for (let i = listPet.length; i;) {
-        randomNumber = Math.random() * i-- | 0;
-        tmp = listPet[randomNumber];
-        listPet[randomNumber] = listPet[i];
-        listPet[i] = tmp;
-      }
+  
+    random(listPet);
 
     return(
       <PetImg listPet={listPet}/>
