@@ -1,8 +1,17 @@
-export default function PetCard({listPet}){
-    return(
-        listPet.map(pet=>{
-            return <img src={pet}/>
-        })
+export default function PetImg({ listPet }) {
+    return (
+        <main>
+            {
+                listPet.map(pet => {
+                    return (
+                        <div className="img-container">
+                            <img src={pet} />
+                        </div>
+                    )
+                })
+            }
+        </main>
+
     )
 
 }

@@ -1,20 +1,10 @@
-import RoutesApp from './routes';
-
-import Nav from './components/Nav/Nav';
+import RoutesApp from "./routes";
 
 function App() {
 
-
   return (
     <div className="container">
-      <div className="content">
-      <Nav/>
-        <main >
-          <div className="img-container">
-             <RoutesApp/>
-          </div>
-        </main>
-      </div>
+           <RoutesApp/>
     </div>
   )
 }

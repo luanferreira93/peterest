@@ -1,9 +1,10 @@
 nav{
-    width: 80px;
+    width: 76px;
     height: 360px;
     background: #FFFFFF;
-    border-radius: 20px; 
+    border-radius: 20px;
     position: fixed;
+    margin-left: 50px;
 }
 
 nav,ul{
@@ -11,11 +12,6 @@ nav,ul{
     flex-direction: column;
     align-items: center;
 }
-
-a:active{
-    fill: orangered;
-}
-
 
 .icon-heart{
     margin-top: 20px;
@@ -30,9 +26,19 @@ a:active{
     fill: red;
 }
 
+.margin-bottom-25{
+    margin-bottom: 25px;
+}
+
+
 svg{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+}
+
+svg path.active{
+    fill: orangered;
+
 }
 
 svg:hover path {

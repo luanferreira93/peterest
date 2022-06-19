@@ -11,7 +11,6 @@ export default function Home(){
 
     const [listPet, setListPet] = useState([]);
 
-    //const url = window.location.href
 
     useEffect(() => {
 
@@ -45,7 +44,7 @@ export default function Home(){
         listPet[randomNumber] = listPet[i];
         listPet[i] = tmp;
       }
-      
+
     return(
       <PetImg listPet={listPet}/>
     )
