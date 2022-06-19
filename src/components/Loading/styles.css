@@ -1,0 +1,11 @@
+.loading-container{
+    width: 1200px;
+    position: absolute;
+    background-color: #FDFDFD;
+    display: flex;
+    justify-content: center;
+}
+
+.loading-spinner{
+    width: 500px;
+}
