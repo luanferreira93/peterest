@@ -13,16 +13,13 @@ export default function Dog(){
 
 
     useEffect(()=>{
-
         async function Pet(){
             const dogApi = new ApiDog();
             const dog = await dogApi.execute();
 
             setListDog(dog.data.message);
         }
-
         Pet();
-
         spinnerSetLoading(false);
 
     },[])
