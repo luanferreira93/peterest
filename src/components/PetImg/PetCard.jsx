@@ -31,13 +31,11 @@ export default function PetImg({ listPet }) {
                 listPet.map(pet => {
                     return (
                         <div className="img-container">
-                            <div className="button-container" onClick={(e)=>{
+                            <div className="button-container" onClick={(e) => {
                                 e.target.className = 'salvo';
                                 e.target.textContent = 'Salvo';
                             }}>
-                                <button onClick={() => favoritePet(pet)}>
-                                    {textButton}
-                                    </button>
+                                <button>{textButton}</button>
                             </div>
                             <img src={pet} />
                         </div>

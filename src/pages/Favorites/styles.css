@@ -1,0 +1,11 @@
+.favorites{
+    margin: 0 auto;
+}
+
+.favorites .salvo{
+    display: none;
+}
+
+.favorites button:hover{
+   display: none;
+}
