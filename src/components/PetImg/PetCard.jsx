@@ -1,32 +1,29 @@
-import { ReactSVG } from 'react-svg';
-
-import Heart from '../../img/heart.svg';
-import Download from '../../img/down.svg';
-
-import './styles.css';
 import { useState } from 'react';
+import './styles.css';
 
 export default function PetImg({ listPet }) {
 
-    const [list,setList] = useState([])
-
     const [textButton, setTextButton] = useState('Salvar');
 
-    function favoritePet(pet){
-        const save = list.some(pets=>{
-            return pets === pet
+    function favoritePet(pet) {
+
+        const petSave = localStorage.getItem('@pets');
+
+        const petList = JSON.parse(petSave) || [];
+
+        const save = petList.some(pets => {
+            return pets === pet;
         })
-        
-        if(save){
-            alert('pet já salvo!.')
+
+        if (save) {
+            alert('Pet já salvo.');
             return
         }
-        
-        setList([...list,pet]);
+
+        petList.push(pet);
+        localStorage.setItem('@pets', JSON.stringify(petList));
+
     }
-    
-    localStorage.setItem('@pets',JSON.stringify(list));
-    console.log(list);
 
     return (
         <main>
@@ -34,8 +31,13 @@ export default function PetImg({ listPet }) {
                 listPet.map(pet => {
                     return (
                         <div className="img-container">
-                            <div className="button-container">
-                                <button onClick={()=>favoritePet(pet)}>{textButton}</button>
+                            <div className="button-container" onClick={(e)=>{
+                                e.target.className = 'salvo';
+                                e.target.textContent = 'Salvo';
+                            }}>
+                                <button onClick={() => favoritePet(pet)}>
+                                    {textButton}
+                                    </button>
                             </div>
                             <img src={pet} />
                         </div>
