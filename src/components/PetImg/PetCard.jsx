@@ -11,18 +11,15 @@ export default function PetImg({ listPet }) {
 
         const petList = JSON.parse(petSave) || [];
 
-        const save = petList.some(pets => {
-            return pets === pet;
-        })
-
+        const save = petList.some(pets => pets === pet)
+        
         if (save) {
-            alert('Pet já salvo.');
+            setTextButton('Salvo');
             return
         }
 
         petList.push(pet);
         localStorage.setItem('@pets', JSON.stringify(petList));
-
     }
 
     return (
@@ -34,6 +31,7 @@ export default function PetImg({ listPet }) {
                             <div className="button-container" onClick={(e) => {
                                 e.target.className = 'salvo';
                                 e.target.textContent = 'Salvo';
+                                favoritePet(pet)
                             }}>
                                 <button>{textButton}</button>
                             </div>
